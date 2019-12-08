@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
-const nodemailer = require('nodemailer');
-const Mongoose = {
-  url: 'mongodb://localhost:27017/test',
+var mongoose = require('mongoose');
+var nodemailer = require('nodemailer');
+var Mongoose = {
+  url: 'mongodb://localhost:27017/lh',
   connect(){
     mongoose.connect(this.url, { useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
       if(err) {
@@ -12,7 +12,7 @@ const Mongoose = {
     });
   }
 };
-const Email = {
+var Email = {
   config: {
     host: "smtp.qq.com",
     port: 587,
