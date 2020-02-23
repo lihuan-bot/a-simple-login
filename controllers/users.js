@@ -61,7 +61,7 @@ var verify = async  (req,res,next) => {
     from: '法海也懂爱 1968763315@qq.com',
     to: email,
     subject: '法海...',
-    text: `验证码${verify}`,
+    text: `验证码:${verify}`,
   };
    Email.transporter.sendMail(mailOptions, (err) => {
      if(err){
